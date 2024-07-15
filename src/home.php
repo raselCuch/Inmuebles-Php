@@ -36,12 +36,12 @@
 	}
 </style>
 
-<div class="containe-fluid">
+<div class="container-fluid">
 	<div class="row mt-3 ml-3 mr-3">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <?php echo "Welcome back ". $_SESSION['login_name']."!"  ?>
+                    <?php echo "Bienvenido"?>
                     <hr>
                     <div class="row">
                         <div class="col-md-4 mb-3">
@@ -52,13 +52,13 @@
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM houses")->num_rows ?>
                                         </b></h4>
-                                        <p><b>Total Houses</b></p>
+                                        <p><b>Total de Casas</b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="index.php?page=houses" class="text-primary float-right">View List <span class="fa fa-angle-right"></span></a>
+                                            <a href="index.php?page=houses" class="text-primary float-right">Ver Lista <span class="fa fa-angle-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -72,13 +72,13 @@
                                         <h4><b>
                                             <?php echo $conn->query("SELECT * FROM tenants where status = 1 ")->num_rows ?>
                                         </b></h4>
-                                        <p><b>Total Tenants</b></p>
+                                        <p><b>Total de Inquilinos</b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="index.php?page=tenants" class="text-primary float-right">View List <span class="fa fa-angle-right"></span></a>
+                                            <a href="index.php?page=tenants" class="text-primary float-right">Ver Lista <span class="fa fa-angle-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -89,19 +89,19 @@
                                 <div class="card-body bg-success">
                                     <div class="card-body text-white">
                                         <span class="float-right summary_icon"> <i class="fa fa-file-invoice "></i></span>
-                                        <h4><b>
-                                            <?php 
+                                        <h4><b> .
+                                            <!-- <?php 
                                              $payment = $conn->query("SELECT sum(amount) as paid FROM payments where date(date_created) = '".date('Y-m-d')."' "); 
                                              echo $payment->num_rows > 0 ? number_format($payment->fetch_array()['paid'],2) : 0;
-                                             ?>
+                                             ?> -->
                                         </b></h4>
-                                        <p><b>Payments This Month</b></p>
+                                        <p><b>Reportes</b></p>
                                     </div>
                                 </div>
                                 <div class="card-footer">
                                     <div class="row">
                                         <div class="col-lg-12">
-                                            <a href="index.php?page=invoices" class="text-primary float-right">View Payments <span class="fa fa-angle-right"></span></a>
+                                            <a href="index.php?page=reports" class="text-primary float-right">Ver Reportes <span class="fa fa-angle-right"></span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,6 +115,9 @@
         </div>
     </div>
 </div>
+
+
+
 <script>
 	$('#manage-records').submit(function(e){
         e.preventDefault()

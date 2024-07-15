@@ -1,5 +1,4 @@
 <?php include('db_connect.php');?>
-
 <div class="container-fluid">
 	
 	<div class="col-lg-12">
@@ -9,15 +8,16 @@
 			</div>
 		</div>
 		<div class="row">
-			<!-- FORM Panel -->
+			<!-- Panel de Formulario -->
 
-			<!-- Table Panel -->
+			<!-- Panel de Tabla -->
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<b>List of Tenant</b>
-						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_tenant">
-					<i class="fa fa-plus"></i> New Tenant
+						<b>Lista de inquilinos</b>
+						<span class="float:right">
+							<!-- <a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_tenant"> -->
+					<!-- <i class="fa fa-plus"></i> Nuevo Inquilino -->
 				</a></span>
 					</div>
 					<div class="card-body">
@@ -25,12 +25,12 @@
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="">Name</th>
-									<th class="">House Rented</th>
-									<th class="">Monthly Rate</th>
-									<th class="">Outstanding Balance</th>
-									<th class="">Last Payment</th>
-									<th class="text-center">Action</th>
+									<th class="">Nombre</th>
+									<th class="">Casa Alquilada</th>
+									<th class="">Tarifa Mensual</th>
+									<th class="">Saldo Pendiente</th>
+									<th class="">Último Pago</th>
+									<th class="text-center">Acciones</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -65,9 +65,9 @@
 										 <p><b><?php echo  $last_payment ?></b></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-outline-primary view_payment" type="button" data-id="<?php echo $row['id'] ?>" >View</button>
-										<button class="btn btn-sm btn-outline-primary edit_tenant" type="button" data-id="<?php echo $row['id'] ?>" >Edit</button>
-										<button class="btn btn-sm btn-outline-danger delete_tenant" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-sm btn-outline-primary view_payment" type="button" data-id="<?php echo $row['id'] ?>" >Ver</button>
+										<!-- <button class="btn btn-sm btn-outline-primary edit_tenant" type="button" data-id="<?php echo $row['id'] ?>" >Editar</button>
+										<button class="btn btn-sm btn-outline-danger delete_tenant" type="button" data-id="<?php echo $row['id'] ?>">Eliminar</button> -->
 									</td>
 								</tr>
 								<?php endwhile; ?>
@@ -76,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Table Panel -->
+			<!-- Panel de Tabla -->
 		</div>
 	</div>	
 

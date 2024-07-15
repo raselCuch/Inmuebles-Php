@@ -4,22 +4,22 @@
 	
 	<div class="col-lg-12">
 		<div class="row">
-			<!-- FORM Panel -->
+			<!-- Panel de Formulario -->
 			<div class="col-md-4">
 			<form action="" id="manage-house">
 				<div class="card">
 					<div class="card-header">
-						    House Form
+						    Formulario de Casa
 				  	</div>
 					<div class="card-body">
 							<div class="form-group" id="msg"></div>
 							<input type="hidden" name="id">
 							<div class="form-group">
-								<label class="control-label">House No</label>
+								<label class="control-label">Número de Casa</label>
 								<input type="text" class="form-control" name="house_no" required="">
 							</div>
 							<div class="form-group">
-								<label class="control-label">Category</label>
+								<label class="control-label">Categoría</label>
 								<select name="category_id" id="" class="custom-select" required>
 									<?php 
 									$categories = $conn->query("SELECT * FROM categories order by name asc");
@@ -29,45 +29,45 @@
 									<option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
 								<?php endwhile; ?>
 								<?php else: ?>
-									<option selected="" value="" disabled="">Please check the category list.</option>
+									<option selected="" value="" disabled="">Por favor, revise la lista de categorías.</option>
 								<?php endif; ?>
 								</select>
 							</div>
 							<div class="form-group">
-								<label for="" class="control-label">Description</label>
+								<label for="" class="control-label">Descripción</label>
 								<textarea name="description" id="" cols="30" rows="4" class="form-control" required></textarea>
 							</div>
 							<div class="form-group">
-								<label class="control-label">Price</label>
+								<label class="control-label">Precio</label>
 								<input type="number" class="form-control text-right" name="price" step="any" required="">
 							</div>
 					</div>
 					<div class="card-footer">
 						<div class="row">
 							<div class="col-md-12">
-								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Save</button>
-								<button class="btn btn-sm btn-default col-sm-3" type="reset" > Cancel</button>
+								<button class="btn btn-sm btn-primary col-sm-3 offset-md-3"> Guardar</button>
+								<button class="btn btn-sm btn-default col-sm-3" type="reset"> Cancelar</button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</form>
 			</div>
-			<!-- FORM Panel -->
+			<!-- Panel de Formulario -->
 
-			<!-- Table Panel -->
+			<!-- Panel de Tabla -->
 			<div class="col-md-8">
 				<div class="card">
 					<div class="card-header">
-						<b>House List</b>
+						<b>Lista de Casas</b>
 					</div>
 					<div class="card-body">
 						<table class="table table-bordered table-hover">
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th class="text-center">House</th>
-									<th class="text-center">Action</th>
+									<th class="text-center">Casa</th>
+									<th class="text-center">Acción</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -79,14 +79,14 @@
 								<tr>
 									<td class="text-center"><?php echo $i++ ?></td>
 									<td class="">
-										<p>House #: <b><?php echo $row['house_no'] ?></b></p>
-										<p><small>House Type: <b><?php echo $row['cname'] ?></b></small></p>
-										<p><small>Description: <b><?php echo $row['description'] ?></b></small></p>
-										<p><small>Price: <b><?php echo number_format($row['price'],2) ?></b></small></p>
+										<p>Número de Casa: <b><?php echo $row['house_no'] ?></b></p>
+										<p><small>Tipo de Casa: <b><?php echo $row['cname'] ?></b></small></p>
+										<p><small>Descripción: <b><?php echo $row['description'] ?></b></small></p>
+										<p><small>Precio: <b><?php echo number_format($row['price'],2) ?></b></small></p>
 									</td>
 									<td class="text-center">
-										<button class="btn btn-sm btn-primary edit_house" type="button" data-id="<?php echo $row['id'] ?>"  data-house_no="<?php echo $row['house_no'] ?>" data-description="<?php echo $row['description'] ?>" data-category_id="<?php echo $row['category_id'] ?>" data-price="<?php echo $row['price'] ?>" >Edit</button>
-										<button class="btn btn-sm btn-danger delete_house" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+										<button class="btn btn-sm btn-primary edit_house" type="button" data-id="<?php echo $row['id'] ?>" data-house_no="<?php echo $row['house_no'] ?>" data-description="<?php echo $row['description'] ?>" data-category_id="<?php echo $row['category_id'] ?>" data-price="<?php echo $row['price'] ?>">Editar</button>
+										<button class="btn btn-sm btn-danger delete_house" type="button" data-id="<?php echo $row['id'] ?>">Eliminar</button>
 									</td>
 								</tr>
 								<?php endwhile; ?>
@@ -95,11 +95,14 @@
 					</div>
 				</div>
 			</div>
-			<!-- Table Panel -->
+			<!-- Panel de Tabla -->
 		</div>
 	</div>	
 
 </div>
+
+
+
 <style>
 	
 	td{
