@@ -6,6 +6,9 @@
 		<div class="row">
 			<!-- Panel de Formulario -->
 			<div class="col-md-4">
+
+
+			
 			<form action="" id="manage-house">
 				<div class="card">
 					<div class="card-header">
@@ -52,6 +55,9 @@
 					</div>
 				</div>
 			</form>
+
+
+
 			</div>
 			<!-- Panel de Formulario -->
 

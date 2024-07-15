@@ -241,6 +241,7 @@ Class Action {
 			return 1;
 		}
 	}
+
 	function save_house(){
 		extract($_POST);
 		$data = " house_no = '$house_no' ";
@@ -260,6 +261,7 @@ Class Action {
 		if($save)
 			return 1;
 	}
+
 	function delete_house(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM houses where id = ".$id);

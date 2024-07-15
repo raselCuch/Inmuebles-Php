@@ -13,7 +13,7 @@
 <div class="sidebar-list">
     <a href="index.php?page=home" class="nav-item nav-home"><span class='icon-field'><i class="fa fa-tachometer-alt"></i></span> Panel de Control</a>
     <!-- <a href="index.php?page=categories" class="nav-item nav-categories"><span class='icon-field'><i class="fa fa-th-list"></i></span> Tipo de Casa</a> -->
-    <a href="index.php?page=houses" class="nav-item nav-houses"><span class='icon-field'><i class="fa fa-home"></i></span> Casas</a>
+    <a href="index.php?page=houses" class="nav-item nav-houses"><span class='icon-field'><i class="fa fa-home"></i></span> Inmuebles</a>
     <a href="index.php?page=tenants" class="nav-item nav-tenants"><span class='icon-field'><i class="fa fa-user-friends"></i></span> Inquilinos</a>
     <!-- <a href="index.php?page=invoices" class="nav-item nav-invoices"><span class='icon-field'><i class="fa fa-file-invoice"></i></span> Pagos</a> -->
     <a href="index.php?page=reports" class="nav-item nav-reports"><span class='icon-field'><i class="fa fa-list-alt"></i></span> Informes</a>
