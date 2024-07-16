@@ -1,149 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- <?php 
-session_start();
-include('./db_connect.php');
-ob_start();
-if(!isset($_SESSION['system'])){
-	$system = $conn->query("SELECT * FROM system_settings limit 1")->fetch_array();
-	foreach($system as $k => $v){
-		$_SESSION['system'][$k] = $v;
-	}
-}
-ob_end_flush();
-?> -->
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<?php include "Apertura_header.php" ?>
+<!-- Navegador -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="login.php">Inmobilidaria "X"</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="arrendatario_registrar.php">Registrarme</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="inicio_usuario.php">Entrar sin registro</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-  <!-- <title><?php echo $_SESSION['system']['name'] ?></title> -->
-  <title>Programa inmuebles</title>
- 	
+<!-- Formulario -->
 
-<?php include('./header.php'); ?>
-<?php 
-if(isset($_SESSION['login_id']))
-header("location:index.php?page=home");
-?>
-
-</head>
-<style>
-	body{
-		width: 100%;
-	    height: calc(100%);
-	    /*background: #007bff;*/
-	}
-	main#main{
-		width:100%;
-		height: calc(100%);
-		background:white;
-	}
-	#login-right{
-		position: absolute;
-		right:0;
-		width:40%;
-		height: calc(100%);
-		background:white;
-		display: flex;
-		align-items: center;
-	}
-	#login-left{
-		position: absolute;
-		left:0;
-		width:60%;
-		height: calc(100%);
-		background:#59b6ec61;
-		display: flex;
-		align-items: center;
-		/*background: url(assets/uploads/blood-cells.jpg);
-	    background-repeat: no-repeat;
-	    background-size: cover;*/
-	}
-	#login-right .card{
-		margin: auto;
-		z-index: 1
-	}
-	.logo {
-    margin: auto;
-    font-size: 8rem;
-    background: white;
-    padding: .5em 0.7em;
-    border-radius: 50% 50%;
-    color: #000000b3;
-    z-index: 10;
-}
-div#login-right::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: calc(100%);
-    height: calc(100%);
-    /*background: #000000e0;*/
-}
-
-</style>
-
-<body>
-
-  <main id="main" class=" bg-light">
-  		<!-- <div id="login-left" class="bg-dark">
-  		</div> -->
-
-  		<div id="login-right" class="">
-  			<div class="w-100">
-			<h4 class="text-white text-center"><b><?php echo $_SESSION['system']['name'] ?></b></h4>
-			<br>
-			<br>
-  			<div class="card col-md-8">
-  				<div class="card-body">
-  					<form id="login-form" >
-  						<div class="form-group">
-  							<label for="username" class="control-label">Username</label>
-  							<input type="text" id="username" name="username" class="form-control">
-  						</div>
-  						<div class="form-group">
-  							<label for="password" class="control-label">Password</label>
-  							<input type="password" id="password" name="password" class="form-control">
-  						</div>
-  						<center><button class="btn-sm btn-block btn-wave col-md-4 btn-primary">Login</button></center>
-  					</form>
-  				</div>
-  			</div>
-  			</div>
-  		</div>
-   
-
-  </main>
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-
+<div class="mt-5 pt-5">
+    <div class="mt-5 pt-5 container aea">
+        <div class="row justify-content-center">
+            <div class="pb-3 border border-4 col-3">
+                <form class="" method="POST">
+                    <?php include "modelo/conexion.php"; ?>
+                    <h3 class="pt-3 text-center text-secondary">Login al sistema</h3>
+                    <?php include "controlador/C_login.php"; ?>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label pt-3">Correo</label>
+                        <input type="text" class="form-control" name="usuario">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" name="contrasena">
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" name="btnIngresar" value="ok">Ingresar</button>
+                    </div>
+                </form>
+                <!-- <a class="btn btn-success" href="#">Registrase</a>
+                <a class="text-dark text-decoration-none" href="#">Entrar sin registro</a> -->
+            </div>
+            <!-- <a href="inicio.php">Modo admin</a> -->
+        </div>
+    </div>
+</div>
 </body>
-<script>
-	$('#login-form').submit(function(e){
-		e.preventDefault()
-		$('#login-form button[type="button"]').attr('disabled',true).html('Logging in...');
-		if($(this).find('.alert-danger').length > 0 )
-			$(this).find('.alert-danger').remove();
-		$.ajax({
-			url:'ajax.php?action=login',
-			method:'POST',
-			data:$(this).serialize(),
-			error:err=>{
-				console.log(err)
-		$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
+<?php include("Apertura_biblierias_Js.php"); ?>
 
-			},
-			success:function(resp){
-				if(resp == 1){
-					location.href ='index.php?page=home';
-				}else{
-					$('#login-form').prepend('<div class="alert alert-danger">Username or password is incorrect.</div>')
-					$('#login-form button[type="button"]').removeAttr('disabled').html('Login');
-				}
-			}
-		})
-	})
-</script>	
 </html>
