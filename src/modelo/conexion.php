@@ -7,9 +7,9 @@
 $conexion = new mysqli( 'mysql_db', 'root' , 'root' , 'gestion_inmuebles');
 $conexion->set_charset ("utf8");
 
-// if($conexion){
+if($conexion){
 // echo "Connected !!!";
 // echo "Soy rasel cucho !!!";
-// }
+}
 
 ?>
