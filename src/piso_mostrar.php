@@ -12,7 +12,7 @@ $idInmueble = $_GET["id"];
 //"$conexion" esta es la variable conexion
 ?>
 
-<div class="mt-4 pt-4 container-fluid bg-light">
+<div class="mt-4 pt-4 container-fluid">
     <div class="row">
         <div class="col-2 p-1">
             <!-- Contenido de la columna 1 -->

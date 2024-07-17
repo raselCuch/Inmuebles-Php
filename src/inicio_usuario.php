@@ -4,7 +4,7 @@
 
 <!-- Formulario -->
 
-<div class="container-fluid bg-light">
+<div class="container-fluid">
     <div class="row">
         <div class="col-1 p-4">
         </div>

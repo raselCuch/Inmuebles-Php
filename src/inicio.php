@@ -12,7 +12,7 @@ $idUsuario = $_SESSION['id_usuario'];?>
 <!-- Barra lateral izquierda (fin) -->
 
 <!-- Contenido Inicio -->
-<div class="container-fluid bg-light">
+<div class="container-fluid">
   <div class="row">
     <div class="col-2 p-1">
       <!-- Contenido de la columna 1 -->

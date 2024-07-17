@@ -1,7 +1,7 @@
 <?php include("Apertura_header.php"); ?>
 <?php include("Apertura_navbar.php"); ?>
 <?php include("Apertura_barraLateral.php"); ?>
-<div class="container-fluid bg-light">
+<div class="container-fluid">
   <div class="mt-4 pt-4 row">
     <div class="col-2 p-1"></div> <!-- Contenido de la columna 1 -->
     <div class="col-10 p-4">
@@ -18,7 +18,7 @@
       include "controlador/C_inmueble_eliminar.php"
       ?>
       <div class="mt-3 pt-3">
-        <table id="example" class="table table-striped data-table" style="width: 100%">
+        <table id="example" class="table data-table" style="width: 100%">
           <thead>
             <tr>
               <th>ID</th>
@@ -47,13 +47,13 @@
                 <td><?= $datos->imn_est_alta ?></td>
                 <td class="text-center">
                   <a class="btn btn-small btn-warning" href="inmueble_modificar.php?id=<?= $datos->inm_id ?>">
-                    <i class="bi bi-pencil-square"></i>
+                    Editar
                   </a>
-                  <a class="btn btn-small btn-info" href="pisoLocales_gestion2.php?id=<?= $datos->inm_id ?>">Pisos 
-                    <i class="bi bi-eye-fill"></i>
+                  <a class="btn btn-small btn-info" href="pisoLocales_gestion2.php?id=<?= $datos->inm_id ?>">
+                    Ver pisos
                   </a>
                   <a onclick="return eliminar()" class="btn btn-small btn-danger" href="inmueble.php?id=<?= $datos->inm_id ?>">
-                    <i class="bi bi-trash-fill"></i>
+                    Eliminar
                   </a>
                 </td>
               </tr>

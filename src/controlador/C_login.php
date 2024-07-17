@@ -1,13 +1,14 @@
 <?php 
-// ob_start();
-session_start();
-include('config.php');
+// include('config.php');
 
 $loginOK = false;
-echo ''.$id_usuario;
 
+// $id_usuario = 2;
+// echo ''.$id_usuario;
 
-$_SESSION['id_usuario'] = 0;
+// $_SESSION['id_usuario'] = 0;
+
+$id_usuario = 0;
 
 if (!empty($_POST["btnIngresar"])) {
     if (!empty($_POST["usuario"]) && !empty($_POST["contrasena"])) {
@@ -26,24 +27,27 @@ if (!empty($_POST["btnIngresar"])) {
         if ($loginOK) {
             if ($datos->usuar_rol == "admin") {
                 // session_start();
-                $_SESSION['id_usuario'] = $datos->usuar_id;
+                // $_SESSION['id_usuario'] = $datos->usuar_id;
+                $id_usuario = $datos->usuar_id;
                 // header("Location: inicio.php?id=$idUsuario");
                 // echo "Logueado";
 
                 echo '<script type="text/javascript">
-                alert("Logueado correctamente como administrador.");
-                window.location.href = "inicio.php?id=$idUsuario";
+                alert("Logueado correctamente como administrador.'.$id_usuario.'");
+                window.location.href = "inicio.php?id='.$id_usuario.'";
                 </script>';
                 // '.$idUsuario'.
             } else {
                 // session_start();
-                $_SESSION['id_usuario'] = $datos->usuar_id;
+                // $_SESSION['id_usuario'] = $datos->usuar_id;
+                
+                $id_usuario = $datos->usuar_id;
                 // echo "Logueado no admin";
                 // header("Location: inicio_usuario.php?id=$idUsuario");
 
                 echo '<script type="text/javascript">
-                alert("Logueado correctamente.");
-                window.location.href = "inicio_usuario.php?id=$idUsuario";
+                alert("Logueado correctamente.'.$id_usuario.'");
+                window.location.href = "inicio_usuario.php?id='.$id_usuario.'";
                 </script>';
             }
             exit();

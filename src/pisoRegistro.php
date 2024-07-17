@@ -6,7 +6,7 @@ include "modelo/conexion.php";
 ?>
 
 <!-- Contenido -->
-<main class="mt-5 pt-4 bg-light">
+<main class="mt-5 pt-4">
   <h3 class="text p-1">Registro de los pisos</h3>
   <div class="container-fluid row">
     <!-- <h4 class="text p-1">Pisos</h4> -->

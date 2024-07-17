@@ -1,14 +1,15 @@
 <?php
-session_start();
-$idUsuario = $_SESSION['id_usuario'];
+
 include "Apertura_header.php";
 include "Apertura_navbar_usuario.php";
 include "modelo/conexion.php";
 
-if($idUsuario == 0){
+// echo 'usuario'.$id_usuario;
+
+if($id_usuario == 0){
     echo 
     '<div class="mt-5 pt-4 alert alert-danger alert-dismissible fade show" role="alert">
-    <strong>Está en modo invitado!</strong> No puede realizar contratos.
+    <strong>Está en modo invitado! '.$id_usuario.'.</strong> No puede realizar contratos.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>';
     exit;
@@ -38,7 +39,7 @@ $sql = "SELECT CONCAT(a.arr_nombres, ', ', a.arr_apellidos) AS 'Nombre completo 
 $resultado = mysqli_query($conexion, $sql);
 ?>
 
-<div class="container-fluid bg-light">
+<div class="container-fluid">
     <script>
         function eliminar() {
             var respuesta = confirm("Está seguro que desea cancelar el contrato?");

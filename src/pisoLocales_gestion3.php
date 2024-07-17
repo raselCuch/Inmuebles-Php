@@ -6,7 +6,7 @@ include "modelo/conexion.php";
 ?>
 
 <!-- Contenido -->
-<main class="mt-5 pt-4 bg-light">
+<main class="mt-5 pt-4">
   <h3 class="text p-1">Gestión de locales</h3>
   <div class="container-fluid row">
     <!-- <h4 class="text p-1">Locales</h4> -->
@@ -16,7 +16,7 @@ include "modelo/conexion.php";
     $result = mysqli_query($conexion, $sql);
     ?>
     <div class="col-12 p-3">
-      <table id="example" class="table table-striped data-table" style="width: 100%">
+      <table id="example" class="table data-table" style="width: 100%">
         <thead>
           <tr>
             <th>ID local</th>
@@ -51,9 +51,9 @@ include "modelo/conexion.php";
           // </td>";
             echo "<td class = 'text-center'>
             <div>
-                    <a class='btn btn-small btn-warning' href='local_modificar.php?id=" . $row['loc_id'] . "'>Aea<i class='bi bi-pencil-square'></i></a>
+                    <a class='btn btn-small btn-warning' href='local_modificar.php?id=" . $row['loc_id'] . "'>Editar</a>
                     <a onclick='return eliminar()' class='btn btn-small btn-danger' href='pisoLocales_gestion2.php?id=" . $row['loc_pis_id'] . "&loc_id=".$row['loc_id']."'>
-                      <i class='bi bi-trash-fill'></i>
+                      Eliminar
                     </a>
                     </div>
                   </td>";

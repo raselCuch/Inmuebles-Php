@@ -9,7 +9,7 @@
 <!-- Barra lateral izquierda (fin) -->
 
 <!-- Contenido -->
-<main class="mt-5 pt-4 bg-light">
+<main class="mt-5 pt-4">
   <script>
     function eliminar() {
       var respuesta = confirm("Está seguro que desea eliminar?");
@@ -65,7 +65,7 @@
 
     <div class="col-12 p-3">
       <!-- Tabla -->
-      <table id="example" class="table table-striped data-table" style="width: 100%">
+      <table id="example" class="table data-table" style="width: 100%">
         <thead>
           <tr>
             <th>ID</th>

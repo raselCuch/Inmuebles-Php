@@ -17,11 +17,16 @@ if (!empty($_POST["btnModificar"])) {
     // Ejecutar la consulta
     if (mysqli_query($conexion, $sql)) {
         // echo "Los datos de la tabla local se actualizaron correctamente.";
-        echo "<script language='JavaScript'>
-        alert('Se ah modificado el local correctamente.');
-        location.assign('../modulos/pisoLocales_registro.php?id=" . $loc_pis_id . "');
-        </script>
-        ";
+        // echo "<script language='JavaScript'>
+        // alert('Se ah modificado el local correctamente.');
+        // location.assign('../modulos/pisoLocales_registro.php?id=" . $loc_pis_id . "');
+        // </script>
+        // ";
+
+        echo '<script type="text/javascript">
+                alert("Se ah modificado el local correctamente.");
+                window.location.href = "inmueble.php";
+                </script>';
     } else {
         echo "Error al actualizar los datos de la tabla local: " . mysqli_error($conexion);
     }

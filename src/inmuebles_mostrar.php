@@ -5,7 +5,7 @@ $idUsuario = $_SESSION['id_usuario']; ?>
 include "Apertura_navbar_usuario.php";
 include("modelo/conexion.php"); ?>
 
-<div class="container-fluid bg-light">
+<div class="container-fluid">
     <div class="row">
         <div class="col-2 p-1">
             <!-- Contenido de la columna 1 -->

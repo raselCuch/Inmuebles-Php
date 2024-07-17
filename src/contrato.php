@@ -9,7 +9,7 @@
 <!-- Barra lateral izquierda (fin) -->
 
 <!-- Contenido -->
-<main class="pb-5 mt-5 pt-4 bg-light">
+<main class="pb-5 mt-5 pt-4">
   <script>
     function eliminar() {
       var respuesta = confirm("Está seguro que desea eliminar?");
@@ -24,7 +24,7 @@
   <div class="container-fluid row">
     <div class="col-12 p-2">
       <!-- Tabla -->
-      <table id="example" class="table table-striped data-table" style="width: 118%">
+      <table id="example" class="table data-table" style="width: 118%">
         <thead>
           <tr>
             <th>ID</th>
@@ -35,7 +35,7 @@
             <th>F. Inicio</th>
             <th>F. Fin</th>
             <th>Monto</th>
-            <th>Ver</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -70,7 +70,7 @@
               <td><?= $datos->fechaFinContrato ?></td>
               <td>S/. <?= $datos->montoAlquiler ?></td>
               <td>
-                <a class="btn btn-small btn-info" href="contrato_ver.php?id=<?= $datos->idContrato ?>"><i class="bi bi-eye-fill"></i></a>
+                <a class="btn btn-small btn-info" href="contrato_ver.php?id=<?= $datos->idContrato ?>">Ver</a>
                 <!-- <a onclick="return eliminar()" class="btn btn-small btn-danger" href="inmuebles.php?id=<?= $datos->inm_id ?>"><i class="bi bi-trash-fill"></i></a> -->
               </td>
             </tr>

@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inmobiliaria</title>
+  <title>Server</title>
 
   <!-- Biblierias css -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -19,4 +19,15 @@
   <!-- Biblierias css (fin) -->
 </head>
 
-<body class="bg-light">
+<body class="">
+
+<?php 
+include('config.php');
+
+// echo 
+//     '<div class="mt-5 pt-4 alert alert-danger alert-dismissible fade show" role="alert">
+//     <strong>Está en modo invitadoff! '.$id_usuario.'.</strong> No puede realizar contratos.
+//     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+//     </div>';
+//     // exit;
+?>

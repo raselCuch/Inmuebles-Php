@@ -1,8 +1,8 @@
 <?php include "Apertura_header.php" ?>
 <!-- Navegador -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="login.php">Inmobilidaria "X"</a>
+        <a class="navbar-brand" href="login.php">Inmobilidaria</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,7 +27,7 @@
             <div class="pb-3 border border-4 col-3">
                 <form class="" method="POST">
                     <?php include "modelo/conexion.php"; ?>
-                    <h3 class="pt-3 text-center text-secondary">Login al sistema</h3>
+                    <h3 class="pt-3 text-center text-secondary">Login</h3>
                     <?php include "controlador/C_login.php"; ?>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label pt-3">Correo</label>

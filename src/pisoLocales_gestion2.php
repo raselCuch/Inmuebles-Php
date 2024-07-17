@@ -5,7 +5,7 @@ include("Apertura_barraLateral.php");
 include "modelo/conexion.php";
 ?>
 
-<main class="mt-5 pt-4 bg-light">
+<main class="mt-5 pt-4">
   <script>
     function eliminar() {
       var respuesta = confirm("Está seguro que desea eliminar?");
@@ -24,7 +24,7 @@ include "modelo/conexion.php";
     $result = mysqli_query($conexion, $sql);
     ?>
     <div class="col-12 p-3">
-      <table id="example" class="table table-striped data-table" style="width: 100%">
+      <table id="example" class="table data-table" style="width: 100%">
         <thead>
           <tr>
             <th>ID piso</th>
@@ -48,10 +48,10 @@ include "modelo/conexion.php";
             echo "<td>" . $row['pis_est_alta'] . "</td>";
             echo "<td class = 'text-center'>
                     <div>
-                    <a class='btn btn-small btn-warning' href='pisoLocal_modificar.php?id=" . $row['pis_id'] . "'><i class='bi bi-pencil-square'></i></a>
-                    <a class='btn btn-small btn-info' href='pisoLocales_gestion3.php?id=" . $row['pis_id'] . "'>Locales <i class='bi bi-eye-fill'></i></a>
+                    <a class='btn btn-small btn-warning' href='pisoLocal_modificar.php?id=" . $row['pis_id'] . "'>Editar</a>
+                    <a class='btn btn-small btn-info' href='pisoLocales_gestion3.php?id=" . $row['pis_id'] . "'>Ver locales</a>
                     <a onclick='return eliminar()' class='btn btn-small btn-danger' href='pisoLocales_gestion2.php?id=" . $idInmueble . "&pis_id=".$row['pis_id']."'>
-                      <i class='bi bi-trash-fill'></i>
+                      Eliminar
                     </a>
                     </div>
                   </td>";

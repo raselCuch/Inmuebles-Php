@@ -1,9 +1,9 @@
-<div class="offcanvas offcanvas-start sidebar-nav bg-dark narrower-navbar-2" tabindex="-1" id="sidebar">
+<div class="offcanvas offcanvas-start sidebar-nav bg-primary narrower-navbar-2" tabindex="-1" id="sidebar">
   <div class="offcanvas-body p-1">
     <nav class="navbar-dark">
       <ul class="navbar-nav">
         <li>
-          <div class="text-muted small fw-bold text-uppercase px-3 mb-1 mt-1">
+          <div class="text-light small fw-bold text-uppercase px-3 mb-1 mt-1">
             Interfaces
           </div>
         </li>
@@ -71,14 +71,12 @@
                     <!-- <span class="me-2"><i class="bi bi-speedometer2"></i></span> -->
                     <span>Bienes de baja</span>
                   </a>
-                  <a href="#" class="nav-link px-3">
-                    <!-- <span class="me-2"><i class="bi bi-speedometer2"></i></span> -->
+                  <!-- <a href="#" class="nav-link px-3">
                     <span>Bien más alquilado</span>
                   </a>
                   <a href="#" class="nav-link px-3">
-                    <!-- <span class="me-2"><i class="bi bi-speedometer2"></i></span> -->
                     <span>Modalidad más usada</span>
-                  </a>
+                  </a> -->
                 </li>
               </ul>
             </div>
