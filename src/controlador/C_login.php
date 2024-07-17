@@ -1,6 +1,12 @@
-<?php ob_start();
-// session_start();
+<?php 
+// ob_start();
+session_start();
+include('config.php');
+
 $loginOK = false;
+echo ''.$id_usuario;
+
+
 $_SESSION['id_usuario'] = 0;
 
 if (!empty($_POST["btnIngresar"])) {
@@ -21,11 +27,24 @@ if (!empty($_POST["btnIngresar"])) {
             if ($datos->usuar_rol == "admin") {
                 // session_start();
                 $_SESSION['id_usuario'] = $datos->usuar_id;
-                header("Location: inicio.php?id=$idUsuario");
+                // header("Location: inicio.php?id=$idUsuario");
+                // echo "Logueado";
+
+                echo '<script type="text/javascript">
+                alert("Logueado correctamente como administrador.");
+                window.location.href = "inicio.php?id=$idUsuario";
+                </script>';
+                // '.$idUsuario'.
             } else {
                 // session_start();
                 $_SESSION['id_usuario'] = $datos->usuar_id;
-                header("Location: inicio_usuario.php?id=$idUsuario");
+                // echo "Logueado no admin";
+                // header("Location: inicio_usuario.php?id=$idUsuario");
+
+                echo '<script type="text/javascript">
+                alert("Logueado correctamente.");
+                window.location.href = "inicio_usuario.php?id=$idUsuario";
+                </script>';
             }
             exit();
         } else {
