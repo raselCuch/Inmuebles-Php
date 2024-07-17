@@ -1,4 +1,4 @@
-<?php 
+<?php
 if(!empty($_GET["id"])){
     $id=$_GET["id"];
     $sqll=$conexion->query("delete from inmueble where inm_id=$id");

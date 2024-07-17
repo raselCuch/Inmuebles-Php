@@ -16,6 +16,12 @@ if (!empty($_POST["btnRegistrar"])) {
           //   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           // </div>';
           // location.assign('../modulos/pisoLocales_gestion2.php'); 
+
+          echo '<script type="text/javascript">
+                alert("Inmueble registrado correctamente");
+                window.location.href = "inmueble.php";
+                </script>';
+
           $sql=$conexion->query ("select inm_id from inmueble order by inm_id asc");
           while ($row = $sql->fetch_assoc()) {
             $lastId = $row['inm_id'];
