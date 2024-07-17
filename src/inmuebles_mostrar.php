@@ -44,7 +44,6 @@ include("modelo/conexion.php"); ?>
                             // Mostrar mensaje de "No disponible" en rojo con estilo de Bootstrap
                             echo    '<div class="col-4">
                                         <div class="card mb-4">
-                                            <img src="files/edificio.png" class="card-img-top" alt="Edificio">
                                             <div class="card-body">
                                                 <h5 class="card-title">' . $inmuebleTipo . ' ' . $inmuebleId . '</h5>
                                                 <p class="card-text">Ubicación: ' . $inmuebleUbicacion . '</p>
@@ -57,7 +56,6 @@ include("modelo/conexion.php"); ?>
                             // Mostrar la caja del inmueble con botones activos
                             echo '<div class="col-4">
                                         <div class="card mb-4">
-                                            <img src="files/edificio.png" class="card-img-top" alt="Edificio">
                                             <div class="card-body">
                                                 <h5 class="card-title">' . $inmuebleTipo . ' ' . $inmuebleId . '</h5>
                                                 <p class="card-text">Ubicación: ' . $inmuebleUbicacion . '</p>
@@ -78,11 +76,11 @@ include("modelo/conexion.php"); ?>
 
                             if (!$hay_local_alquilado) {
                                 // Si no hay local alquilado, mostrar el botón "Alquila edificio"
-                                echo '<a href="contratoRegistrar.php?id_inmueble=' . $inmuebleId . '&precio_inmueble=' . $precioDescuento . '&tipo_contrato=Edificio" class="btn btn-primary alquilar-btn">Alquilar edificio</a>';
+                                echo '<a href="contratoRegistrar.php?id_inmueble=' . $inmuebleId . '&precio_inmueble=' . $precioDescuento . '&tipo_contrato=Edificio" class="btn btn-outline-primary alquilar-btn">Alquilar edificio</a>';
                             }
 
                             // Mostrar el botón "Ver interiores" siempre
-                            echo '<a href="piso_mostrar.php?id=' . $inmuebleId . '" class="btn btn-warning">Ver interiores</a>
+                            echo '<a href="piso_mostrar.php?id=' . $inmuebleId . '" class="btn btn-outline-warning">Ver interiores</a>
                                             </div>
                                         </div>
                                     </div>';

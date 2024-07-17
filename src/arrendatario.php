@@ -52,7 +52,7 @@
               <td>S/. <?= $datos->arr_sueldo ?></td>
               <td><?= $datos->arr_estado ?></td>
               <td>
-                <a class="btn btn-small btn-info" href="arrendatario_ver.php?id=<?= $datos->arr_id ?>">Ver</a>
+                <a class="btn btn-outline-info" href="arrendatario_ver.php?id=<?= $datos->arr_id ?>">Ver</a>
                 <!-- <a onclick="return eliminar()" class="btn btn-small btn-danger" href="inmuebles.php?id=<?= $datos->inm_id ?>"><i class="bi bi-trash-fill"></i></a> -->
               </td>
             </tr>

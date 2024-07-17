@@ -81,7 +81,7 @@ $idInmueble = $_GET["id"];
                             // Mostrar la tarjeta del local
                             echo '<div class="col-4">
                                     <div class="card mb-4">
-                                        <img src="files/local.png" class="card-img-top" alt="Edificio">
+                                        
                                         <div class="card-body">
                                             <h5 class="card-title">Local ' . $localNumero . '(' . $localId . ')</h5>
                                             <p class="card-text">Descripción: ' . $localDetalle . '</p>

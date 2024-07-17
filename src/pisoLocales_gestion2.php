@@ -48,9 +48,9 @@ include "modelo/conexion.php";
             echo "<td>" . $row['pis_est_alta'] . "</td>";
             echo "<td class = 'text-center'>
                     <div>
-                    <a class='btn btn-small btn-warning' href='pisoLocal_modificar.php?id=" . $row['pis_id'] . "'>Editar</a>
-                    <a class='btn btn-small btn-info' href='pisoLocales_gestion3.php?id=" . $row['pis_id'] . "'>Ver locales</a>
-                    <a onclick='return eliminar()' class='btn btn-small btn-danger' href='pisoLocales_gestion2.php?id=" . $idInmueble . "&pis_id=".$row['pis_id']."'>
+                    <a class='btn btn-outline-warning' href='pisoLocal_modificar.php?id=" . $row['pis_id'] . "'>Editar</a>
+                    <a class='btn btn-outline-info' href='pisoLocales_gestion3.php?id=" . $row['pis_id'] . "'>Ver locales</a>
+                    <a onclick='return eliminar()' class='btn btn-outline-danger' href='pisoLocales_gestion2.php?id=" . $idInmueble . "&pis_id=".$row['pis_id']."'>
                       Eliminar
                     </a>
                     </div>

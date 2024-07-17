@@ -38,7 +38,7 @@
                         <input type="password" class="form-control" name="contrasena">
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary" name="btnIngresar" value="ok">Ingresar</button>
+                        <button type="submit" class="btn btn-outline-primary" name="btnIngresar" value="ok">Ingresar</button>
                     </div>
                 </form>
                 <!-- <a class="btn btn-success" href="#">Registrase</a>

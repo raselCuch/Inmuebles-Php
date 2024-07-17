@@ -49,7 +49,7 @@
               <td><?= $datos->bit_info_nuevo ?></td> -->
               <td><?= $datos->bit_f_modificacion ?></td>
               <td>
-                <a class="btn btn-small btn-info" href="bitacora_ver.php?id=<?= $datos->bit_id ?>"><i class="bi bi-eye-fill"></i></a>
+                <a class="btn btn-outline-info" href="bitacora_ver.php?id=<?= $datos->bit_id ?>"><i class="bi bi-eye-fill"></i></a>
                 <!-- <a onclick="return eliminar()" class="btn btn-small btn-danger" href="inmuebles.php?id=<?= $datos->inm_id ?>"><i class="bi bi-trash-fill"></i></a> -->
               </td>
             </tr>

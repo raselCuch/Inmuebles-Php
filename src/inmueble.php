@@ -12,7 +12,7 @@
         }
       </script>
       <h3 class="text p-1">Gestión de inmuebles</h3>
-      <a class="btn btn-primary" href="inmueble_registro.php"><i class="bi bi-plus-square"></i> Registrar inmueble</a>
+      <a class="btn btn-outline-success" href="inmueble_registro.php"><i class="bi bi-plus-square"></i> Registrar inmueble</a>
       <?php
       include "modelo/conexion.php";
       include "controlador/C_inmueble_eliminar.php"
@@ -46,13 +46,13 @@
                 <td><?= $datos->inm_est_alquilado ?></td>
                 <td><?= $datos->imn_est_alta ?></td>
                 <td class="text-center">
-                  <a class="btn btn-small btn-warning" href="inmueble_modificar.php?id=<?= $datos->inm_id ?>">
+                  <a class="btn btn-outline-warning" href="inmueble_modificar.php?id=<?= $datos->inm_id ?>">
                     Editar
                   </a>
-                  <a class="btn btn-small btn-info" href="pisoLocales_gestion2.php?id=<?= $datos->inm_id ?>">
+                  <a class="btn btn-outline-info" href="pisoLocales_gestion2.php?id=<?= $datos->inm_id ?>">
                     Ver pisos
                   </a>
-                  <a onclick="return eliminar()" class="btn btn-small btn-danger" href="inmueble.php?id=<?= $datos->inm_id ?>">
+                  <a onclick="return eliminar()" class="btn btn-outline-danger" href="inmueble.php?id=<?= $datos->inm_id ?>">
                     Eliminar
                   </a>
                 </td>

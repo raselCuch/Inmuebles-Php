@@ -70,7 +70,7 @@
               <td><?= $datos->fechaFinContrato ?></td>
               <td>S/. <?= $datos->montoAlquiler ?></td>
               <td>
-                <a class="btn btn-small btn-info" href="contrato_ver.php?id=<?= $datos->idContrato ?>">Ver</a>
+                <a class="btn btn-outline-info" href="contrato_ver.php?id=<?= $datos->idContrato ?>">Ver</a>
                 <!-- <a onclick="return eliminar()" class="btn btn-small btn-danger" href="inmuebles.php?id=<?= $datos->inm_id ?>"><i class="bi bi-trash-fill"></i></a> -->
               </td>
             </tr>

@@ -51,8 +51,8 @@ include "modelo/conexion.php";
           // </td>";
             echo "<td class = 'text-center'>
             <div>
-                    <a class='btn btn-small btn-warning' href='local_modificar.php?id=" . $row['loc_id'] . "'>Editar</a>
-                    <a onclick='return eliminar()' class='btn btn-small btn-danger' href='pisoLocales_gestion2.php?id=" . $row['loc_pis_id'] . "&loc_id=".$row['loc_id']."'>
+                    <a class='btn btn-outline-warning' href='local_modificar.php?id=" . $row['loc_id'] . "'>Editar</a>
+                    <a onclick='return eliminar()' class='btn btn-outline-danger' href='pisoLocales_gestion2.php?id=" . $row['loc_pis_id'] . "&loc_id=".$row['loc_id']."'>
                       Eliminar
                     </a>
                     </div>
